@@ -1,0 +1,320 @@
+/** Ordenar caja */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/** Globales */
+body{
+    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+
+
+/* ///////////////////////////////////////////// */
+
+/** Barra de Navegacion */
+#header{
+  width: 100%;
+  height: 9rem;
+  padding: 0 5rem;
+  background-color: rgb(228, 228, 228);
+  position: fixed;
+  top: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}  
+
+#header-img{
+  width: 30rem;
+}
+
+#nav-bar > ul{
+  display: flex;
+  width: 50rem;
+  height: 4rem;
+  padding: 0;
+  justify-content:center;
+  align-items: center;
+}
+
+#nav-bar > ul > li{
+    list-style: none;
+    width: 17rem ;
+    height: 3rem;
+    margin: 0 2rem;
+    text-align: center;
+    padding: .5rem 0;
+  }
+
+  /* Estilos cuando seleccionas navbar */
+  #nav-bar > ul > li :hover{
+    color: rgb(241, 185, 0);
+    border-bottom: solid 3px rgb(245, 185, 0);
+    transition: .06s ease-in-out 0ms;
+  }
+
+  #nav-bar > ul > li > a {
+    color: rgb(0, 0, 0);
+    height: 3rem; 
+}
+
+/* Cambiar dirección de Barra de navegacion al encoger pantalla */
+@media (max-width: 1023px) {
+  #header{
+    flex-direction: column;
+  }
+  #header-img{
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 767px) { 
+  #header{
+    margin: 0;
+    padding: 0;
+  }
+
+  #nav-bar > ul{
+    width: 35rem;
+    
+  }
+
+  #nav-bar > ul > li{
+    margin: 0;
+    padding: 0;
+  }
+
+
+}
+
+/* //////////////////////////////////////////// */
+
+/** Contenido principal */
+.first-container{
+  width: 87%;
+  margin: 10rem auto;
+}
+
+#hero > h1{
+  margin: 2rem 0 2rem 0;
+}
+
+#hero{
+  display: grid; 
+  justify-content: center;
+  text-align: center;
+  height: 20rem;
+  border-radius: 1rem;
+  box-shadow: 
+    7px 3px 5px 2px rgba(111, 111, 111, 
+    0.216),-3px -3px 5px 2px rgba(111, 111, 111, 0.216);
+  margin: 11rem auto 2rem auto;
+  align-content: center;
+}
+
+#form{
+  margin: 1rem auto;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: .5rem;
+}
+
+/* Estilos al input de email */
+#hero input[type='email']{
+  max-width: 27.5rem;
+  width: 100%;
+  padding: .5rem;
+}
+
+/* Estilos al boton de submit */
+#hero input[type='submit']{
+  background-color: rgb(255, 240, 32);
+  color: black;
+  width: 15rem;
+  height: 3.5rem;
+  margin: 1.5rem 0;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-weight: bold;
+  border: none;
+}
+
+#hero input[type='submit']:hover{
+  background-color: rgb(100, 100, 100);
+  color: rgb(255, 240, 32);
+  border: solid 3px rgb(255, 240, 32);
+  width: 18rem;
+  cursor: pointer;
+  transition: .3s ease-in-out 5ms;
+}
+
+@media (max-width: 767px) {
+  #hero > h1{
+    font-size: 2rem;
+    height: 5rem;
+    width: 30rem;
+    margin: 0 auto;
+  }
+}
+/* //////////////////////////////////////// */
+
+.container{
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* //////////////////////////////////// */
+/* *Features */
+#features{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 4rem 0 0 0;
+}
+
+#features i{
+  font-size: 5rem;
+  color: darkorange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 125px;
+}
+
+.features-cont{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.features-descrip{
+  width: calc(85% - 20vw);
+  height: 125px;
+  padding: 3rem 0;
+}
+
+@media (max-width: 767px) {
+    #features{
+      align-items: start;
+    }
+    .features-cont{
+      align-items: start;
+      height: 17rem;
+    }
+    .features-descrip{
+      padding: 0;
+    }
+}
+
+/* //////////////////////////////////////// */
+/* *Video */
+#how_it_works{
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+/* ///////////////////////////////////////// */
+/* *Prices */
+#pricing{
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-items{
+  width: calc(100%/3);
+  margin: 1rem;
+  border: solid 2px black;
+  text-align: center;
+  border-radius: 1rem;
+}
+.pricing-items > h3{
+  font-weight: normal;
+  background-color: #DDDDDD;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.pricing-cash{
+  font-weight: 400;
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.pricing-description{
+  padding: 0 1.2rem;
+}
+
+.pricing-btn{
+  text-transform: uppercase;
+  width: 10rem;
+  padding: .7rem 0;
+  margin: 1rem 0;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: rgb(255, 240, 32);
+}
+
+.pricing-btn:hover{
+  background-color: rgb(100, 100, 100);
+  color: rgb(255, 240, 32);
+  width: 15rem;
+  cursor: pointer;
+  transition: .3s ease-in-out 5ms;
+}
+
+@media (max-width: 767px) {
+  #pricing{
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-items{
+    width: 80vw;
+  }
+}
+
+/* ///////////////////////////////////////// */
+
+/** Footer */
+footer{
+  background-color: rgba(216, 216, 216, 0.703);
+  margin: 3rem 0 0 0;
+  padding: 1.5rem;
+  box-shadow: 
+  3px 3px 5px 2px rgba(111, 111, 111, 
+  0.216),-3px -3px 5px 2px rgba(111, 111, 111, 0.216);
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+}
+
+footer > p{
+  color: rgb(97, 97, 97);
+}
+
+.nav-footer > ul{
+  width: 25rem !important;
+}
